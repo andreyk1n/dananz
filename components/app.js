@@ -28,9 +28,9 @@
 // Інструкція знаходиться тут --> ./js_components/initBurgerMenu.js
 // ---------------------------------------------------------------------------------------------------------------
 
-// import { initBurgerMenu } from './js_components/initBurgerMenu.js';
+import { initBurgerMenu } from './js_components/initBurgerMenu.js';
 // Викликаємо функцію initBurgerMenu
-// initBurgerMenu();
+initBurgerMenu();
 
 // ---------------------------------------------------------------------------------------------------------------
 // Підключення функціоналу аккордіону
@@ -41,9 +41,9 @@
 
 // ---------------------------------------------------------------------------------------------------------------
 // Підключення функціонал скролл хедера
-// import { initScrollControlledHeader } from './js_components/scrollHeader.js';
+import { initScrollControlledHeader } from './js_components/scrollHeader.js';
 // Викликаємо скролл хедера
-// initScrollControlledHeader();
+initScrollControlledHeader();
 // ---------------------------------------------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------------------------------------------

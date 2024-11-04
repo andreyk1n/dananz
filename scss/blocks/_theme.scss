@@ -21,7 +21,7 @@ $bgColor: white;
 
 // ---------------------------------------------------------------------------------------------------------------
 // Тривалість переходу (transition-duration) <- рекомендую використовувати якусь одну для всього проекту
-$transitionDuration: .8s;
+$transitionDuration: .4s;
 // ---------------------------------------------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------------------------------------------
@@ -31,10 +31,10 @@ $fontColor: #9C9C9C;
 $blueBgColor: #2C3878;
 //---Кольори для посиланнь---
 // Стандартний колір посиланнь
-$linkColor: blue;
+$linkColor: #333333;
 
 // Колір при наведені на посилання
-$linkHoverColor: magenta;
+// $linkHoverColor: magenta;
 
 // Активний колір при кліку
 $activeColor: green;
@@ -82,22 +82,14 @@ $h3FontWeight: 700;
 // ---------------------------------------------------------------------------------------------------------------
 //---Налаштування стилів кнопки з класом .button---
 // Фоновий колір кнопки
-$buttonBgColor: rgb(80, 80, 117);
+$buttonBgColor: #2C3878;
 
 // Колір шрифта на кнопці
 $buttonFontColor: white;
 
 // Внутрішні відступи у кнопці --- краще застосовувати запис у скороченому форматі
-$buttonPaddings: 5px 20px;
+$buttonPaddings: 14px 32px;
 
-// Заокруглення кнопки
-$buttonBorderRadius: 10px;
-
-// Колір при наведенні на кнопку
-$buttonHover: lightBlue;
-
-// Колір при кліку на кнопку
-$buttonActive: rgb(16, 77, 97);
 // ---------------------------------------------------------------------------------------------------------------
 
 
@@ -173,14 +165,21 @@ a {
     color: $linkColor;
     text-decoration: none;
     transition-duration: $transitionDuration;
-}
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px; // розташування лінії під текстом
+        width: 0;
+        height: 2px; // товщина лінії
+        background-color: #333333; // колір лінії
+        transition: width 0.3s ease; // анімація зміни ширини
+    }
 
-a:hover {
-    color: $linkHoverColor;
-}
-
-a:active {
-    color: $activeColor;
+    &:hover::after {
+        width: 100%; // збільшуємо ширину лінії до 100% при наведенні
+    }
 }
 
 // Застосування стилів для кнопкки з класом .button
@@ -193,19 +192,21 @@ a:active {
     transition-duration: $transitionDuration;
     color: $buttonFontColor;
     padding: $buttonPaddings;
-    border-radius: $buttonBorderRadius;
+    font-size: 14px;
     cursor: pointer;
-    border: 0;
+    border: 2px solid $buttonBgColor;
     outline: 0;
 }
 
 .button:hover {
-    background-color: $buttonHover;
+    color: $blueBgColor;
+    background-color: #ffffff;
+    border: 2px solid $buttonBgColor;
 }
 
-.button:active {
-    background-color: $buttonActive;
-}
+// .button:active {
+//     background-color: $buttonActive;
+// }
 
 
 // Розміра для основних тайтлів h1-h3, адаптив шрифта розрахуовується формулою (розмір шрифта - (розмір шрифта / n); n - можна налаштовувати під себе, як вам заманеться, формулу замінювати теж.

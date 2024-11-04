@@ -18,8 +18,26 @@
 </head>
 
 <body>
-  <h1 class="banner__title">lflflflg</h1>
-      <!-- <script type="module" src="./components/app.js" defer></script> -->
+  
+  <header class="header">
+    <div class="header__container">
+      <a href="#" class="header__logo">
+        <img src="./images/header__logo.svg" alt="Header logo">
+      </a>
+      <nav class="header__nav">
+        <a href="/">Home</a>
+        <a href="/about/">About Us</a>
+        <a href="/services/">Services</a>
+        <a href="/our-teams">Our Teams</a>
+        <button class="button">Contact Us</button>
+      </nav>
+      <div class="header__burger">
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+      <script type="module" src="./components/app.js" defer></script>
 
       <script src="./libs/js/lazyImg.js" defer></script>
       
@@ -30,14 +48,14 @@
       <!-- Скрипт дла підказок щодо оптимізації/доступності сайту -->
       <!-- --------------------------------------------------------- -->
 
-      <script>
+      <!-- <script>
         setTimeout(() => {
           const script = document.createElement('script');
           script.type = 'module';
           script.src = './components/app.js';
           document.body.appendChild(script);
         }, 2500); // затримка в 2500 мілісекунд (2,5 секунди)
-      </script>
+      </script> -->
 
 
 </body>
