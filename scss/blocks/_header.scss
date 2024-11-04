@@ -20,6 +20,9 @@
 
     &__logo {
         z-index: 11;
+        &::after {
+            display: none;
+        }
     }
 
     &__nav {
