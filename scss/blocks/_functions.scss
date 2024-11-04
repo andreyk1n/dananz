@@ -60,20 +60,18 @@ $base-image-path: '../images/';
 
 // Функція для створення шляху до зображення
 @function imagePath($folder, $image-name) {
-  @return #{$base-image-path}#{$folder}/#{$image-name};
+    @return #{$base-image-path}#{$folder}/#{$image-name};
 }
 
 // Приклад використання функції для властивості background-image
 // .example {
 //     background-image: url(imagePath('fol', 'IMAGE.png'));
 //   }
-  
-  // Приклад використання функції для властивості content (для псевдоелементів)
+
+// Приклад використання функції для властивості content (для псевдоелементів)
 //   .example::before {
 //     content: url(imagePath('fol', 'IMAGE.png'));
 //   }
 
 
 // ---------------------------------------------------------------------------------------------------------------
-
-  
