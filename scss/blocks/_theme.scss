@@ -221,6 +221,13 @@ h1.banner__title {
     @include adaptiveValue('font-size', 72px, 32px);
 }
 
+h2 {
+    @include adaptiveValue('font-size', 36px, 22px);
+    @include adaptiveValue('line-height', 61px, 21px);
+    font-weight: 600;
+    color: #333333;
+}
+
 
 // Базові стилі для контейнера сторінки
 html {
@@ -248,6 +255,13 @@ ol, ul {
     padding-left: 20px;
     li:not(:last-child) {
         padding-bottom: 15px;
+    }
+}
+
+.section {
+    margin: 80px 0;
+    @media (max-width: 768px) {
+        margin: 65px 0;
     }
 }
 // ---------------------------------------------------------------------------------------------------------------

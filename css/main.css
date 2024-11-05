@@ -145,6 +145,83 @@ h1.banner__title {
   }
 }
 
+h2 {
+  font-size: 36px;
+  line-height: 61px;
+  font-weight: 600;
+  color: #333333;
+}
+@media (max-width: 1200px) {
+  h2 {
+    font-size: 34px;
+  }
+}
+@media (max-width: 992px) {
+  h2 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 576px) {
+  h2 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 480px) {
+  h2 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 360px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 320px) {
+  h2 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1200px) {
+  h2 {
+    line-height: 55.2857142857px;
+  }
+}
+@media (max-width: 992px) {
+  h2 {
+    line-height: 49.5714285714px;
+  }
+}
+@media (max-width: 768px) {
+  h2 {
+    line-height: 43.8571428571px;
+  }
+}
+@media (max-width: 576px) {
+  h2 {
+    line-height: 38.1428571429px;
+  }
+}
+@media (max-width: 480px) {
+  h2 {
+    line-height: 32.4285714286px;
+  }
+}
+@media (max-width: 360px) {
+  h2 {
+    line-height: 26.7142857143px;
+  }
+}
+@media (max-width: 320px) {
+  h2 {
+    line-height: 21px;
+  }
+}
+
 html {
   line-height: 1.5;
 }
@@ -170,6 +247,15 @@ ol, ul {
 }
 ol li:not(:last-child), ul li:not(:last-child) {
   padding-bottom: 15px;
+}
+
+.section {
+  margin: 80px 0;
+}
+@media (max-width: 768px) {
+  .section {
+    margin: 65px 0;
+  }
 }
 
 .header {
@@ -585,6 +671,154 @@ ol li:not(:last-child), ul li:not(:last-child) {
 }
 .banner__infos-items p {
   font-size: 16px;
+}
+
+.about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about__container {
+  display: flex;
+  flex-direction: column;
+}
+.about__label {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #333333;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.about__title {
+  margin-bottom: 50px;
+}
+.about__line {
+  display: block;
+  width: 100%;
+  max-width: 529px;
+  height: 2px;
+  background-color: #333333;
+}
+.about__author {
+  margin-top: 30px;
+  margin-left: -70px;
+  width: 100%;
+  max-width: 276px;
+  padding: 10px 15px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background-color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.about__author > div {
+  display: flex;
+  flex-direction: column;
+}
+.about__author-name {
+  font-weight: 600;
+  color: #000;
+  font-size: 18px;
+}
+.about__author-img {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 50%;
+}
+@media (max-width: 992px) {
+  .about__author {
+    margin: 0;
+  }
+}
+.about__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media (max-width: 992px) {
+  .about__content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 992px) {
+  .about__content > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: -76px;
+    max-width: 276px;
+  }
+}
+.about__more {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 80px;
+  margin-top: 80px;
+  margin-left: 90px;
+}
+@media (max-width: 1200px) {
+  .about__more {
+    margin-top: 74.2857142857px;
+  }
+}
+@media (max-width: 992px) {
+  .about__more {
+    margin-top: 68.5714285714px;
+  }
+}
+@media (max-width: 768px) {
+  .about__more {
+    margin-top: 62.8571428571px;
+  }
+}
+@media (max-width: 576px) {
+  .about__more {
+    margin-top: 57.1428571429px;
+  }
+}
+@media (max-width: 480px) {
+  .about__more {
+    margin-top: 51.4285714286px;
+  }
+}
+@media (max-width: 360px) {
+  .about__more {
+    margin-top: 45.7142857143px;
+  }
+}
+@media (max-width: 320px) {
+  .about__more {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 1200px) {
+  .about__more {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 992px) {
+  .about__more {
+    margin: 0;
+  }
+}
+.about__img {
+  width: 70%;
+  max-width: 880px;
+}
+@media (max-width: 992px) {
+  .about__img {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .modal {

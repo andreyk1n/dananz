@@ -1,0 +1,120 @@
+.about {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #333333;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__line {
+        display: block;
+        width: 100%;
+        max-width: 529px;
+        height: 2px;
+        background-color: #333333;
+    }
+
+    &__author {
+        margin-top: 30px;
+        margin-left: -70px;
+        width: 100%;
+        max-width: 276px;
+        padding: 10px 15px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        background-color: white;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+
+        &>div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-name {
+            font-weight: 600;
+            color: #000;
+            font-size: 18px;
+        }
+
+        &-img {
+            width: 56px;
+            height: 56px;
+            min-width: 56px;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 992px) {
+            margin: 0;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @media (max-width: 992px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &>div {
+            @media (max-width: 992px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                margin-top: -76px;
+                max-width: 276px;
+            }
+        }
+    }
+
+    &__more {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 80px;
+        @include adaptiveValue('margin-top', 80px, 40px);
+        margin-left: 90px;
+
+        @media (max-width: 1200px) {
+            margin-left: 20px;
+        }
+
+        @media (max-width: 992px) {
+            margin: 0;
+        }
+
+    }
+
+    &__img {
+        width: 70%;
+        max-width: 880px;
+
+        @media (max-width: 992px) {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}
