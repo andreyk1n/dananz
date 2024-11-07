@@ -294,6 +294,7 @@ ol li:not(:last-child), ul li:not(:last-child) {
   align-items: center;
   background-color: #ffffff;
   padding: 6px 0;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
 .header__container {
   display: flex;
@@ -939,6 +940,182 @@ ol li:not(:last-child), ul li:not(:last-child) {
     margin-left: 0;
     margin-top: 0;
   }
+}
+
+.products {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.products__container {
+  display: flex;
+  flex-direction: column;
+}
+.products__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.products__header h2, .products__header p {
+  display: block;
+}
+.products__header h2 {
+  max-width: 330px;
+}
+.products__header p {
+  max-width: 470px;
+  font-size: 16px;
+}
+@media (max-width: 1200px) {
+  .products__header p {
+    font-size: 15.7142857143px;
+  }
+}
+@media (max-width: 992px) {
+  .products__header p {
+    font-size: 15.4285714286px;
+  }
+}
+@media (max-width: 768px) {
+  .products__header p {
+    font-size: 15.1428571429px;
+  }
+}
+@media (max-width: 576px) {
+  .products__header p {
+    font-size: 14.8571428571px;
+  }
+}
+@media (max-width: 480px) {
+  .products__header p {
+    font-size: 14.5714285714px;
+  }
+}
+@media (max-width: 360px) {
+  .products__header p {
+    font-size: 14.2857142857px;
+  }
+}
+@media (max-width: 320px) {
+  .products__header p {
+    font-size: 14px;
+  }
+}
+.products__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: #333333;
+  counter-reset: list-counter;
+  padding: 50px 40px 50px 0;
+}
+.products__list > li {
+  position: relative;
+  counter-increment: list-counter;
+  list-style: none;
+  font-size: 24px;
+  font-weight: 600;
+}
+@media (max-width: 1200px) {
+  .products__list > li {
+    font-size: 23.1428571429px;
+  }
+}
+@media (max-width: 992px) {
+  .products__list > li {
+    font-size: 22.2857142857px;
+  }
+}
+@media (max-width: 768px) {
+  .products__list > li {
+    font-size: 21.4285714286px;
+  }
+}
+@media (max-width: 576px) {
+  .products__list > li {
+    font-size: 20.5714285714px;
+  }
+}
+@media (max-width: 480px) {
+  .products__list > li {
+    font-size: 19.7142857143px;
+  }
+}
+@media (max-width: 360px) {
+  .products__list > li {
+    font-size: 18.8571428571px;
+  }
+}
+@media (max-width: 320px) {
+  .products__list > li {
+    font-size: 18px;
+  }
+}
+@media (max-width: 400px) {
+  .products__list > li {
+    max-width: 260px;
+  }
+}
+.products__list > li::after {
+  content: url('data:image/svg+xml,<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_1_612)"><path d="M6.66699 16H25.3337" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 6.66666L25.3333 16L16 25.3333" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1_612"><rect width="32" height="32" fill="white"/></clipPath></defs></svg>');
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.products__list > li p {
+  display: block;
+  margin-top: 0.5em;
+  font-weight: normal;
+  font-size: 16px;
+  padding-left: 45px;
+  max-width: 460px;
+}
+@media (max-width: 1200px) {
+  .products__list > li p {
+    font-size: 15.7142857143px;
+  }
+}
+@media (max-width: 992px) {
+  .products__list > li p {
+    font-size: 15.4285714286px;
+  }
+}
+@media (max-width: 768px) {
+  .products__list > li p {
+    font-size: 15.1428571429px;
+  }
+}
+@media (max-width: 576px) {
+  .products__list > li p {
+    font-size: 14.8571428571px;
+  }
+}
+@media (max-width: 480px) {
+  .products__list > li p {
+    font-size: 14.5714285714px;
+  }
+}
+@media (max-width: 360px) {
+  .products__list > li p {
+    font-size: 14.2857142857px;
+  }
+}
+@media (max-width: 320px) {
+  .products__list > li p {
+    font-size: 14px;
+  }
+}
+.products__list > li:nth-child(-n+9)::before {
+  content: "0" counter(list-counter);
+  display: inline-block;
+  margin-right: 0.5em;
+}
+.products__list > li:nth-child(n+10)::before {
+  content: counter(list-counter);
+  display: inline-block;
+  margin-right: 0.5em;
 }
 
 .modal {

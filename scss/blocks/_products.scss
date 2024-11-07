@@ -1,0 +1,81 @@
+.products {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+
+        h2, p {
+            display: block;
+        }
+
+        h2 {
+            max-width: 330px;
+        }
+
+        p {
+            max-width: 470px;
+            @include adaptiveValue('font-size', 16px, 14px); 
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        color: #333333;
+        counter-reset: list-counter;
+        padding: 50px 40px 50px 0;
+    
+        > li {
+            position: relative;
+            counter-increment: list-counter;
+            list-style: none;
+            @include adaptiveValue('font-size', 24px, 18px);
+            font-weight: 600;
+    
+            @media (max-width: 400px) {
+                max-width: 260px;
+            }
+    
+            &::after {
+                content: url('data:image/svg+xml,<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_1_612)"><path d="M6.66699 16H25.3337" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 6.66666L25.3333 16L16 25.3333" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1_612"><rect width="32" height="32" fill="white"/></clipPath></defs></svg>');
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+    
+            p {
+                display: block;
+                margin-top: 0.5em; 
+                font-weight: normal;
+                @include adaptiveValue('font-size', 16px, 14px); 
+                padding-left: 45px;
+                max-width: 460px;
+            }
+    
+            &:nth-child(-n+9)::before {
+                content: "0" counter(list-counter);
+                display: inline-block;
+                margin-right: 0.5em;
+            }
+    
+            &:nth-child(n+10)::before {
+                content: counter(list-counter);
+                display: inline-block;
+                margin-right: 0.5em;
+            }
+        }
+    }
+    
+}
