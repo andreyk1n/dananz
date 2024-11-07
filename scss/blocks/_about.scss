@@ -9,28 +9,8 @@
         flex-direction: column;
     }
 
-    &__label {
-        font-size: 16px;
-        font-weight: 500;
-        text-transform: uppercase;
-        color: #333333;
-        position: relative;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 10px;
-    }
-
     &__title {
         margin-bottom: 50px;
-    }
-
-    &__line {
-        display: block;
-        width: 100%;
-        max-width: 529px;
-        height: 2px;
-        background-color: #333333;
     }
 
     &__author {

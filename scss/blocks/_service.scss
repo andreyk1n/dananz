@@ -1,0 +1,78 @@
+.service {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+        p {
+            max-width: 470px;
+            margin-top: 10px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 880px;
+        background-color: #fff;
+        z-index: 1;
+        color: #333333;
+        counter-reset: list-counter;
+        padding: 50px 40px 50px 0;
+
+        >li {
+            position: relative;
+            counter-increment: list-counter; 
+            list-style: none;
+            @include adaptiveValue('font-size', 24px, 18px);
+            font-weight: 600;
+
+            @media (max-width:400px) {
+                max-width: 260px;
+            }
+
+            &::after {
+                content: url('data:image/svg+xml,<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_1_612)"><path d="M6.66699 16H25.3337" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 6.66666L25.3333 16L16 25.3333" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1_612"><rect width="32" height="32" fill="white"/></clipPath></defs></svg>');
+                position: absolute;
+                right: 40px;
+                top: 50%;
+                transform: translateY(-50%);
+
+                @media (max-width: 992px) {
+                    right: 0;
+                }
+              }
+
+            &:nth-child(-n+9)::before {
+                content: "0" counter(list-counter);
+                display: inline-block;
+                margin-right: 0.5em;
+              }
+
+            &:nth-child(n+10)::before {
+                content: counter(list-counter);
+                display: inline-block;;
+                margin-right: 0.5em;
+            }
+        }
+    }
+
+    &__img {
+        width: calc(100% - 120px);
+        height: 100%;
+        max-height: 524px;
+        margin-left: 120px;
+        margin-top: -150px;
+
+        @media (max-width: 992px) {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 0;
+        }
+    }
+}
