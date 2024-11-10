@@ -1245,6 +1245,16 @@ ol li:not(:last-child), ul li:not(:last-child) {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 1600px) {
+  .banner-main {
+    height: 100vh;
+  }
+}
+@media (max-width: 768px) {
+  .banner-main {
+    height: auto;
+  }
+}
 .banner-main__container {
   display: flex;
   flex-direction: column;
@@ -1262,6 +1272,108 @@ ol li:not(:last-child), ul li:not(:last-child) {
 @media (max-width: 768px) {
   .banner-main {
     margin: 75px 0;
+  }
+}
+
+.achivement {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.achivement__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.achivement__container h2 {
+  max-width: 730px;
+}
+.achivement__content {
+  margin-top: 30px;
+  display: flex;
+  gap: 60px;
+}
+@media (max-width: 768px) {
+  .achivement__content {
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+.achivement__stats {
+  background-color: #2C3878;
+  max-width: 252px;
+  max-height: 525px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .achivement__stats {
+    flex-direction: row;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+  }
+}
+.achivement__stats-items {
+  text-align: center;
+}
+.achivement__stats-items--header {
+  font-size: 52px;
+}
+@media (max-width: 1200px) {
+  .achivement__stats-items--header {
+    font-size: 48.5714285714px;
+  }
+}
+@media (max-width: 992px) {
+  .achivement__stats-items--header {
+    font-size: 45.1428571429px;
+  }
+}
+@media (max-width: 768px) {
+  .achivement__stats-items--header {
+    font-size: 41.7142857143px;
+  }
+}
+@media (max-width: 576px) {
+  .achivement__stats-items--header {
+    font-size: 38.2857142857px;
+  }
+}
+@media (max-width: 480px) {
+  .achivement__stats-items--header {
+    font-size: 34.8571428571px;
+  }
+}
+@media (max-width: 360px) {
+  .achivement__stats-items--header {
+    font-size: 31.4285714286px;
+  }
+}
+@media (max-width: 320px) {
+  .achivement__stats-items--header {
+    font-size: 28px;
+  }
+}
+.achivement__stats-items p {
+  font-size: 16px;
+}
+.achivement__image {
+  width: 100%;
+  max-width: calc(100% - 270px);
+  height: 525px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .achivement__image {
+    max-width: 100%;
   }
 }
 
