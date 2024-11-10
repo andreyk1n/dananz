@@ -1377,6 +1377,87 @@ ol li:not(:last-child), ul li:not(:last-child) {
   }
 }
 
+.why {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.why__container {
+  display: flex;
+  flex-direction: column;
+}
+.why__container > p {
+  max-width: 470px;
+}
+.why__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 36px;
+}
+@media (max-width: 768px) {
+  .why__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 576px) {
+  .why__cards {
+    grid-template-columns: 1fr;
+  }
+}
+.why__card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+.why__card-title {
+  font-weight: 600;
+  font-size: 24px;
+  font-size: 24px;
+  color: #333333;
+}
+@media (max-width: 1200px) {
+  .why__card-title {
+    font-size: 23.1428571429px;
+  }
+}
+@media (max-width: 992px) {
+  .why__card-title {
+    font-size: 22.2857142857px;
+  }
+}
+@media (max-width: 768px) {
+  .why__card-title {
+    font-size: 21.4285714286px;
+  }
+}
+@media (max-width: 576px) {
+  .why__card-title {
+    font-size: 20.5714285714px;
+  }
+}
+@media (max-width: 480px) {
+  .why__card-title {
+    font-size: 19.7142857143px;
+  }
+}
+@media (max-width: 360px) {
+  .why__card-title {
+    font-size: 18.8571428571px;
+  }
+}
+@media (max-width: 320px) {
+  .why__card-title {
+    font-size: 18px;
+  }
+}
+
 .modal {
   display: none;
   position: fixed;
