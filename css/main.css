@@ -282,6 +282,15 @@ ol li:not(:last-child), ul li:not(:last-child) {
   background-color: #333333;
 }
 
+.mt15 {
+  margin-top: 15px;
+}
+
+@media (max-width: 992px) {
+  .cnt-card {
+    order: 99;
+  }
+}
 .header {
   z-index: 10;
   position: fixed;
@@ -1632,6 +1641,123 @@ ol li:not(:last-child), ul li:not(:last-child) {
   display: block;
   color: #333333;
   font-weight: 600;
+}
+
+.location {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.location__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.location__cards {
+  display: grid;
+  grid-template-columns: 400px 1fr 1fr;
+  gap: 40px;
+  margin-top: 20px;
+}
+@media (max-width: 992px) {
+  .location__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 576px) {
+  .location__cards {
+    grid-template-columns: 1fr;
+  }
+}
+.location__card {
+  display: flex;
+  flex-direction: column;
+}
+.location__card span {
+  display: block;
+  font-weight: bold;
+  color: #333333;
+  font-size: 24px;
+}
+@media (max-width: 1200px) {
+  .location__card span {
+    font-size: 23.4285714286px;
+  }
+}
+@media (max-width: 992px) {
+  .location__card span {
+    font-size: 22.8571428571px;
+  }
+}
+@media (max-width: 768px) {
+  .location__card span {
+    font-size: 22.2857142857px;
+  }
+}
+@media (max-width: 576px) {
+  .location__card span {
+    font-size: 21.7142857143px;
+  }
+}
+@media (max-width: 480px) {
+  .location__card span {
+    font-size: 21.1428571429px;
+  }
+}
+@media (max-width: 360px) {
+  .location__card span {
+    font-size: 20.5714285714px;
+  }
+}
+@media (max-width: 320px) {
+  .location__card span {
+    font-size: 20px;
+  }
+}
+.location__card span.big {
+  font-size: 36px;
+}
+@media (max-width: 1200px) {
+  .location__card span.big {
+    font-size: 34.2857142857px;
+  }
+}
+@media (max-width: 992px) {
+  .location__card span.big {
+    font-size: 32.5714285714px;
+  }
+}
+@media (max-width: 768px) {
+  .location__card span.big {
+    font-size: 30.8571428571px;
+  }
+}
+@media (max-width: 576px) {
+  .location__card span.big {
+    font-size: 29.1428571429px;
+  }
+}
+@media (max-width: 480px) {
+  .location__card span.big {
+    font-size: 27.4285714286px;
+  }
+}
+@media (max-width: 360px) {
+  .location__card span.big {
+    font-size: 25.7142857143px;
+  }
+}
+@media (max-width: 320px) {
+  .location__card span.big {
+    font-size: 24px;
+  }
+}
+.location__card a {
+  max-width: fit-content;
+  color: #9C9C9C;
+}
+.location__card a:hover {
+  color: #333333;
 }
 
 .modal {

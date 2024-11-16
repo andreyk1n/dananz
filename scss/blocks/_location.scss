@@ -1,0 +1,50 @@
+.location {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 400px 1fr 1fr;
+        gap: 40px;
+        margin-top: 20px;
+
+        @media (max-width: 992px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 576px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+
+        span {
+            display: block;
+            font-weight: bold;
+            color: #333333;
+            @include adaptiveValue('font-size', 24px, 20px);
+
+            &.big {
+                @include adaptiveValue('font-size', 36px, 24px);
+            }
+        }
+
+        a {
+            max-width: fit-content;
+            color: #9C9C9C;
+            &:hover {
+                color: #333333;
+            }
+        }
+    }
+}
