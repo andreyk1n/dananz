@@ -291,6 +291,53 @@ ol li:not(:last-child), ul li:not(:last-child) {
     order: 99;
   }
 }
+.form {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form__header {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .form__header {
+    flex-direction: column;
+  }
+}
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+.form__field label {
+  color: #333333;
+}
+.form__field input {
+  padding: 12px;
+}
+.form__field input::placeholder {
+  padding: 5px;
+  color: #888;
+}
+.form__field textarea {
+  padding: 12px;
+}
+.form__field textarea::placeholder {
+  padding: 5px;
+  color: #888;
+}
+.form > .form__field:not(:last-child) {
+  margin-bottom: 15px;
+}
+
 .header {
   z-index: 10;
   position: fixed;
